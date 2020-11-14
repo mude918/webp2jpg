@@ -14,7 +14,7 @@ for file_name in file_names:
             os.rename(filepath, '.'.join((image_folder + file_name).split('.')[:-1])+'.'+trueformat)
         if trueformat == 'webp':
             im = Image.open(image_folder + file_name).convert("RGB")
-            im.save(image_folder + file_name, "jpg")
+            im.save(image_folder + file_name, "jpeg")
             print('WEBP image: ', file_name)
         else:
             print(filesuffix, trueformat)
